@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+          Ein Kundenportal für STP-Koordinatoren 
+          oder Keyuser im Rahmen der 
+          STP-Batchverarbeitungen (TEV)
+        </section>
+				
+        <section data-markdown>
+          <textarea data-template>
+          * Was versteht man unter Batchverarbeitung?
+
+          * Basierend auf der Graphentheorie, dazu ein wenig Theorie =)
+
+          * Definition: "gerichtete, unterschiedlich gewichtete Graphen"
+          </textarea>
+        </section>
+        
+        <section>
+          <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
+          </script>
+
+          <div class="mermaid">
+          graph TD 
+          A[Job 1] --> B[Job 2] 
+          B --> C[Job 3] 
+          B --> D[Job 4]
+          D --> E[Job 5]
+          C --> F
+          F[Job 6] --> E
+          C --> E
+          </div>
+        </section>
+        
+        <section>Slide 2</section>
+        <section>Slide 2</section>
+        <section>Slide 2</section>
+			
+      </div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
