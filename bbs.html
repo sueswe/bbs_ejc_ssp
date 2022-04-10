@@ -1,0 +1,70 @@
+<html>
+<style>
+
+body {
+  background-color: #179A0E; 
+  font-family: Verdana;
+  }
+
+h1 {
+  color: white;
+  }
+
+</style>
+</html>
+
+<h1 id="ein-kundenportal-fr-stp-koordinatoren">Ein Kundenportal für STP-Koordinatoren</h1>
+
+<h1 id="oder-keyuser-im-rahmen-der">oder Keyuser im Rahmen der</h1>
+
+<h1 id="stp-batchverarbeitungen-tev">STP-Batchverarbeitungen (TEV)</h1>
+
+<h2 id="was-versteht-man-unter-batchverarbeitung">Was versteht man unter Batchverarbeitung?</h2>
+
+<p>Basierend auf der Graphentheorie, dazu ein wenig 
+Theriie =)</p>
+
+<p>Definition: “gerichtete, unterschiedlich gewichtete Graphen”</p>
+
+<html>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
+</script>
+
+<div class="mermaid">
+graph TD 
+A[Job 1] --&gt; B[Job 2] 
+B --&gt; C[Job 3] 
+B --&gt; D[Job 4]
+D --&gt; E[Job 5]
+C --&gt; E
+</div>
+</html>
+
+<html>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
+</script>
+Verboten im Jobablauf:
+<div class="mermaid">
+graph TD 
+A[Job 1] --&gt; B[Job 2] 
+B --&gt; C[Job 3] 
+B --&gt; D[Job 4]
+D --&gt; E[Job 5]
+C --&gt; E
+C --Circular Dependency --&gt; B
+</div>
+</html>
+
+<hr />
+
+<h2 id="motivation">Motivation</h2>
+
+<ul>
+  <li>Warum baut man Software um ein Stück Enterprise Software herum?</li>
+</ul>
+
+<h2 id="entstehungsprozess">Entstehungsprozess</h2>
+
+<ul>
+  <li>Kundenbefragung:</li>
+</ul>
