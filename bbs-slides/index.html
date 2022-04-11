@@ -1,74 +1,102 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+  <title>Opcon Self Service Portal: BBS</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/black.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-          Ein Kundenportal für STP-Koordinatoren 
-          oder Keyuser im Rahmen der 
-          STP-Batchverarbeitungen (TEV)
-        </section>
-				
-        <section data-markdown>
-          <textarea data-template>
-          * Was versteht man unter Batchverarbeitung?
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/zenburn.css">
+  </head>
+  <body>
+  <div class="reveal">
+  <div class="slides">
 
-          * Basierend auf der Graphentheorie, dazu ein wenig Theorie =)
+    <section data-background-image="http://scheduling.sozvers.at/images/itsv_logo.png"
+             data-background-opacity=0.7
+             data-background-size="1800px">
+    </section>
 
-          * Definition: "gerichtete, unterschiedlich gewichtete Graphen"
-          </textarea>
-        </section>
-        
-        <section>
-          <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
-          </script>
+    <section data-background-image="http://scheduling.sozvers.at/images/itsv_logo.png"
+             data-background-opacity=0.2
+             data-background-size="1800px">
+      Ein Kundenportal für STP-Koordinatoren / Keyuser
+      im Rahmen der STP-Batchverarbeitungen (TEV)
+    </section>
 
+    <section data-markdown>
+      <textarea data-template>
+        Was versteht man unter Batchverarbeitung im Sinne eines Enterprise Job Control Tools?
+
+        Basiert <p class="fragment">(üblicherweise)</p> auf der Graphentheorie
+      </textarea>
+    </section>
+
+    <section data-markdown>
+      <textarea data-template>
+      Definition: "gerichtete, unterschiedlich gewichtete, Graphen"
+
+      * <p class="fragment"> Jeder Job entspricht einem Knoten</p>
+
+      * <p class="fragment"> Jede Abhängigkeit entspricht einer Kante</p>
+      </textarea>
+    </section>
+
+    <section>
+      <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+        <div class="mermaid">
+        graph TD
+        A[Job 1] --> B[Job 2]
+        B --> C[Job 3]
+        B --> D[Job 4]
+        D --> E[Job 5]
+        C --> F
+        F[Job 6] --> E
+        C --> E
+        </div>
+      </section>
+
+    <section>
+        Verboten im Jobablauf: zyklische gerichtete Graphen
+
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
           <div class="mermaid">
-          graph TD 
-          A[Job 1] --> B[Job 2] 
-          B --> C[Job 3] 
+          graph TD
+          A[Job 1] --> B[Job 2]
+          B --> C[Job 3]
           B --> D[Job 4]
           D --> E[Job 5]
-          C --> F
-          F[Job 6] --> E
           C --> E
+          C -- Circular Dependency --> B
           </div>
-        </section>
-        
-        <section>Slide 2</section>
-        <section>Slide 2</section>
-        <section>Slide 2</section>
-			
-      </div>
-		</div>
+    </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    <section>New Slide </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <section>New Slide</section>
+
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+  // More info about initialization & config:
+  // - https://revealjs.com/initialization/
+  // - https://revealjs.com/config/
+  Reveal.initialize({
+  hash: true,
+
+  // Learn about plugins: https://revealjs.com/plugins/
+  plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+  });
+  </script>
+  </body>
 </html>
