@@ -8,10 +8,10 @@
 
   <link rel="stylesheet" href="dist/reset.css">
   <link rel="stylesheet" href="dist/reveal.css">
-  <link rel="stylesheet" href="dist/theme/black.css">
+  <link rel="stylesheet" href="dist/theme/blood.css">
 
   <!-- Theme used for syntax highlighted code -->
-  <link rel="stylesheet" href="plugin/highlight/zenburn.css">
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
   </head>
   <body>
   <div class="reveal">
@@ -59,11 +59,13 @@
         F[Job 6] --> E
         C --> E
         </div>
+        <aside class="notes">
+          Sollte keine Grafik dargestellt werden, drücke F5 (reload slide)
+        </aside>
       </section>
 
     <section>
         Verboten im Jobablauf: zyklische gerichtete Graphen
-
         <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
           <div class="mermaid">
           graph TD
@@ -74,6 +76,18 @@
           C --> E
           C -- Circular Dependency --> B
           </div>
+          <aside class="notes">
+            Sollte keine Grafik dargestellt werden, drücke F5 (reload slide)
+          </aside>
+
+    </section>
+
+    <section>
+      Opon-System: Aufbau
+      <div class="r-stack">
+        <img class="fragment" src="http://scheduling.sozvers.at/images/opconarchitecture.png" width="550" height="550">
+        <img class="fragment" src="http://scheduling.sozvers.at/images/opconGUIs.png" width="450" height="650">
+      </div>
     </section>
 
     <section>
@@ -87,9 +101,7 @@
 
     <section data-markdown>
       <textarea data-template>
-
       Motivation:
-
       * <p class="fragment"> tägliche TEV-Anforderung</p>
       * <p class="fragment"> künstlich erzwungene Tickets</p>
       * <p class="fragment"> lange Durchlaufzeit</p>
@@ -100,12 +112,19 @@
 
     <section data-markdown>
       <textarea data-template>
-        Findungsprozess: User Story Map(ping)
-        <img class="fragment" src="http://scheduling.sozvers.at/images/20190417/UserStoryMap_TEV_Gruppe1.jpg" width="850" height="500">
-
+        Ein **Self Service Portal** rund um Opcon muss her.
+        <p class="fragment">Kunde kann seinen täglichen "Batchbedarf" selbst ein- und ausplanen</p>
+        <p class="fragment">Kontrollmechanismen prüfen die Konfigurationen</p>
+        <p class="fragment">Änderungen werden protokolliert (und in ein Ticket verwandelt)</p>
       </textarea>
     </section>
 
+    <section data-markdown>
+      <textarea data-template>
+        Findungsprozess: User Story Mapping
+        <img class="fragment" src="http://scheduling.sozvers.at/images/20190417/UserStoryMap_TEV_Gruppe1.jpg" width="850" height="500">
+      </textarea>
+    </section>
 
     <section>
       Noch Fragen?
@@ -115,6 +134,15 @@
       (Bitte nur leichte)
     </section>
 
+    <section data-markdown>
+      <textarea data-template>
+        Verweise:
+
+        * https://doku.seu.sozvers.at/confluence_secure/display/RZOM/TEV-Self-Service+-+Dokumentation
+
+      </textarea>
+    </section>
+
     </div>
   </div>
 
@@ -122,6 +150,7 @@
   <script src="plugin/notes/notes.js"></script>
   <script src="plugin/markdown/markdown.js"></script>
   <script src="plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <script>
   // More info about initialization & config:
   // - https://revealjs.com/initialization/
